@@ -52,6 +52,11 @@ public class Oferta
 		this.estado = estado;
 	}
 
+	public void aceptar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }
