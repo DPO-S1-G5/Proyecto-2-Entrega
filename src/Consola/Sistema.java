@@ -34,8 +34,23 @@ public class Sistema
 	            if (opcion_seleccionada == 1) {
 	            	
 	            	continuar = false;
-                    Consola_Administrador consola_A = new Consola_Administrador();
-                    consola_A.mostrarMenu_Administrador();
+	            	String login = input("Ingrese su login");
+                    String contraseña = input("Ingrese su contraseña");
+                    Empresa empresa = new Empresa();
+                    Boolean respuesta = empresa.validarCedencialesAdmin(login, contraseña);
+                    System.out.println(respuesta);
+                    
+                    if (respuesta == true)
+                    {
+                    	Consola_Administrador consola_A = new Consola_Administrador();
+                        consola_A.mostrarMenu_Administrador();
+                    }
+                    else 
+                    {
+                    	System.out.println("Error en el Usuario o Contraseña. Volver a intentar.\n");
+                    	
+                    }
+                    
 	            }
 	            
 	          
